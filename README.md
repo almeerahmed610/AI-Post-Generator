@@ -142,7 +142,7 @@ Wait a few moments for GitHub to deploy the website.
 
 Your live website will be available at:
 
-https://almeerahmed610/AI-Post-Generator/
+[https://almeerahmed610/AI-Post-Generator/](https://github.com/almeerahmed610/AI-Post-Generator)
 
 
 Replace almeerahmed610 with your GitHub username.
