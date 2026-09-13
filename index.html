@@ -1,0 +1,132 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>AI Post Generator</title> <link rel="stylesheet" href="styles.css"> </head> <body>
+<div class="container">
+
+    <header class="hero">
+        <div class="logo">✦</div>
+        <h1>AI Post Generator</h1>
+        <p>Create engaging social media posts in seconds.</p>
+    </header>
+
+
+    <main class="generator-card">
+
+        <div class="form-section">
+
+            <label for="topic">
+                What do you want to post about?
+            </label>
+
+            <textarea
+                id="topic"
+                rows="5"
+                placeholder="Example: Launching my new online business..."
+            ></textarea>
+
+
+            <div class="options">
+
+                <div class="field">
+                    <label for="platform">Platform</label>
+
+                    <select id="platform">
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Twitter">X / Twitter</option>
+                    </select>
+                </div>
+
+
+                <div class="field">
+                    <label for="tone">Tone</label>
+
+                    <select id="tone">
+                        <option value="Professional">Professional</option>
+                        <option value="Friendly">Friendly</option>
+                        <option value="Funny">Funny</option>
+                        <option value="Motivational">Motivational</option>
+                        <option value="Casual">Casual</option>
+                    </select>
+                </div>
+
+
+                <div class="field">
+                    <label for="language">Language</label>
+
+                    <select id="language">
+                        <option value="English">English</option>
+                        <option value="Roman Urdu">Roman Urdu</option>
+                        <option value="Urdu">Urdu</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <button
+                id="generateBtn"
+                class="generate-btn"
+                type="button"
+            >
+                <span>✦</span>
+                Generate Post
+            </button>
+
+        </div>
+
+
+        <div class="result-section">
+
+            <div class="result-header">
+
+                <h2>Generated Post</h2>
+
+                <button
+                    id="copyBtn"
+                    class="copy-btn"
+                    type="button"
+                    disabled
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div id="result" class="result-box">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">✍️</div>
+
+                    <h3>Your post will appear here</h3>
+
+                    <p>
+                        Enter a topic and click "Generate Post"
+                        to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="status" class="status"></div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Post Generator Assignment • Built with HTML, CSS & JavaScript
+        </p>
+    </footer>
+
+</div>
+
+
+<script src="./app.js"></script>
+
+</body> </html>

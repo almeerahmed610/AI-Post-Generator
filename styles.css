@@ -1,0 +1,293 @@
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--primary: #6c63ff;
+--primary-dark: #554bdc;
+--background: #f5f7fb;
+--card: #ffffff;
+--text: #1f2937;
+--muted: #6b7280;
+--border: #e5e7eb;
+--success: #16a34a;
+--error: #dc2626;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(135deg, #eef2ff, #f8fafc);
+color: var(--text);
+min-height: 100vh;
+}
+
+.container {
+width: min(1100px, 92%);
+margin: 0 auto;
+padding: 45px 0 25px;
+}
+
+.hero {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.logo {
+width: 58px;
+height: 58px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 15px;
+border-radius: 16px;
+background: linear-gradient(135deg, var(--primary), #8b5cf6);
+color: white;
+font-size: 30px;
+box-shadow: 0 10px 25px rgba(108, 99, 255, 0.25);
+}
+
+.hero h1 {
+font-size: 38px;
+margin-bottom: 10px;
+color: #111827;
+}
+
+.hero p {
+color: var(--muted);
+font-size: 17px;
+}
+
+.generator-card {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 25px;
+background: var(--card);
+padding: 25px;
+border: 1px solid var(--border);
+border-radius: 20px;
+box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+.form-section,
+.result-section {
+padding: 10px;
+}
+
+label {
+display: block;
+font-size: 14px;
+font-weight: 700;
+margin-bottom: 9px;
+color: #374151;
+}
+
+textarea,
+select {
+width: 100%;
+border: 1px solid var(--border);
+border-radius: 11px;
+padding: 13px 14px;
+background: #fafafa;
+color: var(--text);
+font-size: 15px;
+outline: none;
+transition: 0.2s ease;
+}
+
+textarea {
+resize: vertical;
+min-height: 130px;
+font-family: inherit;
+}
+
+textarea:focus,
+select:focus {
+border-color: var(--primary);
+background: white;
+box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.options {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 12px;
+margin-top: 18px;
+}
+
+.generate-btn {
+width: 100%;
+border: none;
+border-radius: 11px;
+padding: 14px;
+margin-top: 20px;
+background: linear-gradient(135deg, var(--primary), #8b5cf6);
+color: white;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+.generate-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
+}
+
+.generate-btn:disabled {
+opacity: 0.7;
+cursor: not-allowed;
+transform: none;
+}
+
+.result-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+
+.result-header h2 {
+font-size: 20px;
+}
+
+.copy-btn {
+border: 1px solid var(--border);
+background: white;
+color: var(--primary);
+padding: 8px 15px;
+border-radius: 8px;
+cursor: pointer;
+font-weight: 700;
+}
+
+.copy-btn:hover:not(:disabled) {
+background: #f5f3ff;
+}
+
+.copy-btn:disabled {
+opacity: 0.45;
+cursor: not-allowed;
+}
+
+.result-box {
+min-height: 330px;
+border: 1px dashed #d1d5db;
+border-radius: 12px;
+background: #fafafa;
+padding: 20px;
+overflow-wrap: break-word;
+}
+
+.empty-state {
+min-height: 285px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: var(--muted);
+}
+
+.empty-icon {
+font-size: 42px;
+margin-bottom: 12px;
+}
+
+.empty-state h3 {
+color: #374151;
+margin-bottom: 7px;
+}
+
+.empty-state p {
+font-size: 14px;
+max-width: 280px;
+line-height: 1.5;
+}
+
+.post-content {
+font-size: 15px;
+line-height: 1.7;
+color: #374151;
+}
+
+.status {
+min-height: 20px;
+text-align: center;
+margin-top: 10px;
+font-size: 14px;
+font-weight: 600;
+}
+
+.status.success {
+color: var(--success);
+}
+
+.status.error {
+color: var(--error);
+}
+
+.spinner {
+display: inline-block;
+width: 14px;
+height: 14px;
+margin-right: 7px;
+border: 2px solid rgba(255, 255, 255, 0.4);
+border-top-color: white;
+border-radius: 50%;
+vertical-align: -2px;
+animation: spin 0.7s linear infinite;
+}
+
+footer {
+text-align: center;
+color: var(--muted);
+font-size: 13px;
+padding-top: 25px;
+}
+
+@keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+
+@media (max-width: 800px) {
+
+.generator-card {
+    grid-template-columns: 1fr;
+}
+
+.options {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 30px;
+}
+
+
+}
+
+@media (max-width: 480px) {
+
+.container {
+    width: 94%;
+    padding-top: 25px;
+}
+
+.generator-card {
+    padding: 15px;
+}
+
+.hero p {
+    font-size: 14px;
+}
+
+.result-box {
+    min-height: 280px;
+}
+
+
+}
